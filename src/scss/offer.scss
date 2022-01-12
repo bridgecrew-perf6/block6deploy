@@ -1,0 +1,72 @@
+.offer {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 0.2px;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    max-width: 421px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+    color: $mainTextColor;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+
+    &:hover {
+      opacity: 0.33;
+    }
+    &:active {
+      opacity: 0.33;
+    }
+    &:visited {
+      opacity: 0.33;
+    }
+    > img {
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .offer {
+    max-width: 767px;
+    &__link {
+      margin-bottom: 40px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+  .offer {
+    max-width: 768px;
+    padding: 0 24px;
+    &__link {
+      margin-bottom: 47px;
+    }
+  }
+}
+@media (min-width: 1120px) {
+  .offer {
+    max-width: 1120px;
+    padding: 0 32px;
+    &__link {
+      margin-bottom: 50px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .offer {
+    min-width: 1120px;
+    margin: 0;
+  }
+}
