@@ -2,10 +2,9 @@ $mainBgColor: #f8f8f8;
 $mainTextColor: #1b1c21;
 $secondaryTextColor: #7e7e82;
 
-
 @import "./fonts.scss";
 @import "./header.scss";
-@import "./main.scss";
+@import "./services.scss";
 @import "./brands.scss";
 @import "./repairs.scss";
 @import "./prices.scss";
@@ -14,7 +13,6 @@ $secondaryTextColor: #7e7e82;
 @import "./side-menu.scss";
 @import "./modal-call.scss";
 @import "./modal-feedback.scss";
-
 
 html {
   box-sizing: border-box;
@@ -45,12 +43,11 @@ body {
   border: none;
   border-radius: 0;
   padding: 0;
-  
+
   background-color: transparent;
   font-family: "TT Lakes", sans-serif;
   font-size: 16px;
   font-weight: 500;
-
 }
 a {
   background-color: transparent;
@@ -71,9 +68,7 @@ li {
 }
 
 .page-container {
-  overflow-y: hidden;
   overflow-x: hidden;
-
   @media (min-width: 1440px) {
     display: flex;
     flex-direction: row-reverse;
@@ -81,10 +76,139 @@ li {
   }
 }
 
-.desktop {
+.wrapper {
   @media (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: RGBA(255, 255, 255, 0.96);
+  z-index: 8;
+}
+
+.overlay--hidden {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(2px);
+  }
+  20% {
+    transform: translate(-2px);
+  }
+  40% {
+    transform: translate(3px, 1px);
+  }
+  100% {
+    transform: translate(-3px, -1px);
+  }
+}
+
+@keyframes rotatescale {
+  0% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(359deg);
+  }
+}
+
+@keyframes backwardsrotatescale {
+  0% {
+    transform: scale(1.1) rotate(359deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: translateX(-1px);
+    filter: drop-shadow(0 0px 2px RGBA(255, 62, 121, 0.5));
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  30% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  60% {
+    transform: translateX(4px);
+  }
+  70% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  90% {
+    transform: translateX(-1px);
+    filter: drop-shadow(0 0px 2px RGBA(255, 62, 121, 0.7));
+  }
+}
+
+@keyframes yshadow {
+  0% {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 0px 2px RGBA(255, 62, 121, 0.5));
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateX(-1px);
+    filter: drop-shadow(0 0px 2px RGBA(255, 62, 121, 0.7));
   }
 }

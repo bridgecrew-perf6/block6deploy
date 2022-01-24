@@ -166,20 +166,20 @@
               },
               // when window width is >= 480px
               420: {
-                slidesPerView: 1.3,
+                slidesPerView: 1.47,
                 
               },
               // when window width is >= 640px
               520: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.84,
                 
               },
               620: {
-                slidesPerView: 2,
+                slidesPerView: 2.15,
                
               },
               720: {
-                slidesPerView: 2.4,
+                slidesPerView: 2.3,
                
               }
             },

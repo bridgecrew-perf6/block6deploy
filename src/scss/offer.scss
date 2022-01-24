@@ -1,7 +1,8 @@
-.offer {
+.wrapper__offer {
   margin: 0 auto;
   padding: 0 16px;
-
+}
+  .offer {
   &__text {
     font-size: 14px;
     line-height: 20px;
@@ -20,7 +21,7 @@
     line-height: 24px;
     color: $mainTextColor;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: ease;
 
     &:hover {
@@ -28,6 +29,7 @@
     }
     &:active {
       opacity: 0.33;
+      transform: translateY(4px);
     }
     &:visited {
       opacity: 0.33;
@@ -47,25 +49,29 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1119px) {
-  .offer {
+  .wrapper__offer {
     max-width: 768px;
     padding: 0 24px;
+  }
+    .offer {  
     &__link {
       margin-bottom: 47px;
     }
   }
 }
 @media (min-width: 1120px) {
-  .offer {
+  .wrapper__offer {
     max-width: 1120px;
     padding: 0 32px;
+  }
+    .offer {
     &__link {
       margin-bottom: 50px;
     }
   }
 }
 @media (min-width: 1440px) {
-  .offer {
+  .wrapper__offer {
     min-width: 1120px;
     margin: 0;
   }

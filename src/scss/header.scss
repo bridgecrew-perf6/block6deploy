@@ -39,8 +39,8 @@
   &__button {
     margin-right: 16px;
     margin-left: 16px;
-    &:hover {
-      transform: scale(1.1);
+    &--anim:hover {
+      animation: shadow 0.7s linear 1;
     }
     &:active {
       filter: drop-shadow(0 0 4px RGBA(27, 28, 33, 0.3));

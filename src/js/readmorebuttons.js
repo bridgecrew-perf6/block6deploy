@@ -1,8 +1,8 @@
  let hiddenTextMain = document.querySelector(
-  ".main-section__text.main-section__text--hidden-mobile"
+  ".services__text.services__text--hidden-mobile"
 );
  let hiddenTextMainTablet = document.querySelector(
-  ".main-section__text--hidden-tablet"
+  ".services__text--hidden-tablet"
 );
 
  let brandsHiddenOnTablet = document.querySelectorAll(
@@ -33,10 +33,10 @@ document.querySelectorAll(".button-open, .button-close").forEach((item) => {
  function openClose(el) {
   checkOpen(el);
   checkparent(el);
-  if (openSection === true && whichSection === "main") {
+  if (openSection === true && whichSection === "services") {
     return openMain();
   }
-  if (openSection === false && whichSection === "main") {
+  if (openSection === false && whichSection === "services") {
     return closeMain();
   }
 
@@ -57,14 +57,14 @@ document.querySelectorAll(".button-open, .button-close").forEach((item) => {
 
  function checkparent(parent) {
   let buttonParent = parent.parentNode;
-  if (buttonParent.className === "main-section__container") {
-    return (whichSection = "main");
+  if (buttonParent.className === "services__info") {
+    return (whichSection = "services");
   }
 
-  if (buttonParent.className === "brands") {
+  if (buttonParent.classList.contains("brands")) {
     return (whichSection = "brands");
   }
-  if (buttonParent.className === "repairs") {
+  if (buttonParent.classList.contains("repairs")) {
     return (whichSection = "repairs");
   }
 }
@@ -80,15 +80,15 @@ document.querySelectorAll(".button-open, .button-close").forEach((item) => {
 
  function openMain() {
   if (window.matchMedia("(min-width: 768px) and (max-width: 1119px)").matches) {
-    hiddenTextMainTablet.classList.toggle("main-section__text--hidden-tablet");
+    hiddenTextMainTablet.classList.toggle("services__text--hidden-tablet");
     let buttonClose = document.querySelector(
-      ".main-section__container .button-close"
+      ".services__info .button-close"
     );
     buttonClose.classList.toggle("button--hidden");
   } else {
-    hiddenTextMain.classList.toggle("main-section__text--hidden-mobile");
+    hiddenTextMain.classList.toggle("services__text--hidden-mobile");
     let buttonClose = document.querySelector(
-      ".main-section__container .button-close"
+      ".services__info .button-close"
     );
     buttonClose.classList.toggle("button--hidden");
   }
@@ -96,15 +96,15 @@ document.querySelectorAll(".button-open, .button-close").forEach((item) => {
 
  function closeMain() {
   if (window.matchMedia("(min-width: 768px) and (max-width: 1119px)").matches) {
-    hiddenTextMainTablet.classList.toggle("main-section__text--hidden-tablet");
+    hiddenTextMainTablet.classList.toggle("services__text--hidden-tablet");
     let buttonOpen = document.querySelector(
-      ".main-section__container .button-open"
+      ".services__info .button-open"
     );
     buttonOpen.classList.toggle("button--hidden");
   } else {
-    hiddenTextMain.classList.toggle("main-section__text--hidden-mobile");
+    hiddenTextMain.classList.toggle("services__text--hidden-mobile");
     let buttonOpen = document.querySelector(
-      ".main-section__container .button-open"
+      ".services__info .button-open"
     );
     buttonOpen.classList.toggle("button--hidden");
   }

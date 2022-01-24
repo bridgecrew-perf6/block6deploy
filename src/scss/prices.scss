@@ -31,10 +31,10 @@
       height: 32px;
       display: block;
       &:hover {
-        transform: scale(1.1);
+        animation: shadow 0.8s linear 1;
       }
       &:active {
-        filter: drop-shadow(0 0 4px RGBA(255, 62, 121, 0.5));
+        transform: translateY(3px);
       }
     }
   }
@@ -161,10 +161,11 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1119px) {
-  .prices {
+  .wrapper__prices {
     margin: 0 auto;
     max-width: 1119px;
-
+  }
+    .prices {
     &__head {
       padding-left: 24px;
       margin: 0 auto;
@@ -274,10 +275,11 @@
   }
 }
 @media (min-width: 1120px) {
-  .prices {
+  .wrapper__prices {
     margin: 0 auto;
     min-width: 1120px;
-
+  }
+    .prices {
     &__head {
       padding-left: 32px;
       margin: 0 auto;
@@ -391,10 +393,11 @@
   }
 }
 @media (min-width: 1440px) {
-  .prices {
+  .wrapper__prices {
     min-width: 1120px;
     margin: 0;
-
+  }
+    .prices {
     &__swiper {
       .swiper-pagination {
         display: none;

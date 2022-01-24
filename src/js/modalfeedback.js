@@ -19,7 +19,7 @@ modalFeedbackContainer.addEventListener("click", function (evt) {
 
 document
   .querySelectorAll(
-    "ul.header__menu-block:nth-child(2) li:nth-child(2) button.header__button, button.menu-footer__button:nth-child(2)"
+    "ul.header__menu-block:nth-child(2) li:nth-child(2) button.header__button, .menu__icons > .menu__button:nth-child(2)"
   )
   .forEach((item) => {
     item.addEventListener("click", (event) => {

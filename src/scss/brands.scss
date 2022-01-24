@@ -34,7 +34,7 @@
     height: 40px;
   }
   &__link:hover {
-    transform: scale(1.1);
+    animation: backwardsrotatescale 0.7s linear infinite;
   }
   &__link:active {
     filter: drop-shadow(0 0 4px rgba(255, 62, 121, 0.5));
@@ -178,10 +178,11 @@
 }
 
 @media (min-width: 1120px) {
-  .brands {
+  .wrapper__brands {
     max-width: 1120px;
     margin: 0 auto;
-
+  }
+    .brands {
     &__head {
       padding-left: 32px;
     }
@@ -257,10 +258,11 @@
   }
 }
 @media (min-width: 1440px) {
-  .brands {
+  .wrapper__brands {
     min-width: 1120px;
     margin: 0;
-
+  }
+    .brands {
     &__swiper {
       .swiper-pagination {
         display: none;

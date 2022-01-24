@@ -40,7 +40,7 @@
     width: 40px;
     height: 40px;
     &:hover {
-      transform: scale(1.1);
+      animation: rotatescale 0.7s linear infinite;
     }
     &:active {
       filter: drop-shadow(0 0 4px rgba(255, 62, 121, 0.5));
@@ -182,10 +182,11 @@
   }
 }
 @media (min-width: 1120px) {
-  .repairs {
+  .wrapper__repairs {
     max-width: 1120px;
     margin: 0 auto;
-
+  }
+    .repairs {
     &__head {
       padding-left: 32px;
     }
@@ -259,10 +260,11 @@
   }
 }
 @media (min-width: 1440px) {
-  .repairs {
+  .wrapper__repairs {
     min-width: 1120px;
     margin: 0;
-
+  }
+    .repairs {
     &__swiper {
       .swiper-pagination {
         display: none;
