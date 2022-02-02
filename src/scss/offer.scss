@@ -3,6 +3,9 @@
   padding: 0 16px;
 }
   .offer {
+  &__title {
+    display: none;
+  }  
   &__text {
     font-size: 14px;
     line-height: 20px;
@@ -23,6 +26,10 @@
     opacity: 1;
     transition-duration: 0.5s;
     transition-timing-function: ease;
+    &:after{
+      content: url("../img/icongosingul.svg");
+      margin-left: 5px;
+    }
 
     &:hover {
       opacity: 0.33;
@@ -34,10 +41,7 @@
     &:visited {
       opacity: 0.33;
     }
-    > img {
-      margin-left: 5px;
-      vertical-align: middle;
-    }
+    
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -50,7 +54,7 @@
 }
 @media (min-width: 768px) and (max-width: 1119px) {
   .wrapper__offer {
-    max-width: 768px;
+    min-width: 768px;
     padding: 0 24px;
   }
     .offer {  
@@ -61,7 +65,7 @@
 }
 @media (min-width: 1120px) {
   .wrapper__offer {
-    max-width: 1120px;
+    min-width: 1120px;
     padding: 0 32px;
   }
     .offer {
@@ -72,7 +76,7 @@
 }
 @media (min-width: 1440px) {
   .wrapper__offer {
-    min-width: 1120px;
+    max-width: 1120px;
     margin: 0;
   }
 }

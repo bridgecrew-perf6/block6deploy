@@ -212,3 +212,8 @@ li {
     filter: drop-shadow(0 0px 2px RGBA(255, 62, 121, 0.7));
   }
 }
+
+@keyframes zoom-in {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}

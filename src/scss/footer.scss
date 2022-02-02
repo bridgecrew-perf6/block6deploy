@@ -55,7 +55,7 @@
 
 @media (min-width: 768px) and (max-width: 1119px) {
     .wrapper__footer {
-      max-width: 768px;
+      min-width: 768px;
       padding: 32px 24px 25px 24px;
       flex-direction: row;
     }
@@ -73,7 +73,7 @@
 }
 @media (min-width: 1120px) {
     .wrapper__footer {
-      max-width: 1120px;
+      min-width: 1120px;
       padding: 32px 33px 21px 31px;
       flex-direction: row;
     }
@@ -90,7 +90,7 @@
   }
   @media (min-width: 1440px) {
     .wrapper__footer {
-      min-width: 1120px;
+      max-width: 1120px;
       margin: 0;
     }
   }
