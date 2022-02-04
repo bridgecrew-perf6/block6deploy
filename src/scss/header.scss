@@ -58,7 +58,7 @@
     .header__menu-block:last-of-type {
       &::before {
         display: block;
-        content: " ";
+        content: "";
         background-color: #eaeaea;
         height: 32px;
         width: 2px;
@@ -80,25 +80,32 @@
   }
   .header__menu-block:first-of-type {
     > li:first-child{
+      position: relative;
     &::after {
-      display: inline-block;
-      content: " ";
+      display: block;
+      content: "";
       background-color: #eaeaea;
       height: 32px;
       width: 2px;
+      position: absolute;
+      left: 55px;
+      top: 5px;
     }
     }
    
   }  
   .header__menu-block:last-of-type {
     > li:nth-last-child(2){
+      position: relative;
     &::before {
-      display: inline-block;
-      
-      content: " ";
+      display: block;
+      content: "";
       background-color: #eaeaea;
       height: 32px;
       width: 2px;
+      position: absolute;
+      right: 55px;
+      top: 5px;
     }
     }
    

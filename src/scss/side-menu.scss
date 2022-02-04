@@ -28,7 +28,11 @@
     animation-duration: 0.6s;
     animation-iteration-count: 1;
     }
-       
+    &--zoom-out {
+      animation-name: zoom-out;
+      animation-duration: 0.6s;
+      animation-iteration-count: 1;
+      }   
 
     .menu__header {
       height: 88px;

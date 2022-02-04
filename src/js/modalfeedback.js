@@ -6,14 +6,18 @@
 
 closeModalFeedback.addEventListener("click", function (evt) {
   evt.preventDefault();
-  modalFeedbackContainer.classList.toggle("modal-feedback--hidden");
+  modalFeedback.classList.remove("modal-call__wrapper--zoom-in");
+  modalFeedback.classList.add("modal-call__wrapper--zoom-out");
+  setTimeout(onClose, 590);
 });
 
 modalFeedbackContainer.addEventListener("click", function (evt) {
   let isClickInside = modalFeedback.contains(evt.target);
 
   if (!isClickInside) {
-    modalFeedbackContainer.classList.toggle("modal-feedback--hidden");
+    modalFeedback.classList.remove("modal-call__wrapper--zoom-in");
+  modalFeedback.classList.add("modal-call__wrapper--zoom-out");
+  setTimeout(onClose, 590);
   }
 });
 
@@ -26,5 +30,13 @@ document
       event.preventDefault();
 
       modalFeedbackContainer.classList.toggle("modal-feedback--hidden");
+      modalFeedback.classList.add("modal-call__wrapper--zoom-in");
     });
   });
+
+
+  function onClose() {
+    modalFeedbackContainer.classList.add("modal-feedback--hidden");
+    modalFeedback.classList.remove("modal-call__wrapper--zoom-out");
+  
+  }

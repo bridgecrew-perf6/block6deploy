@@ -8,17 +8,18 @@
     letter-spacing: -0.6px;
     color: $mainTextColor;
     margin: 0;
+    padding-left: 16px;
+    position: relative;
     &::before {
-      display: inline-block;
+      display: block;
       content: " ";
-      vertical-align: middle;
+      position: absolute;
       background-color: #41f6d7;
       height: 40px;
       width: 4px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      margin-left: -12px;
-      margin-right: 12px;
+      left: 0;
     }
   }
 
@@ -139,9 +140,7 @@
       display: none;
     }
 
-    &__title {
-      margin-left: 12px;
-    }
+    
 
     &__navigation {
       > ul {
@@ -186,11 +185,8 @@
     }
 
     &__title {
-      margin-left: 20px;
-      &::before {
-        margin-left: -20px;
-        margin-right: 20px;
-      }
+      padding-left: 34px;
+  
     }
 
     &__head {
@@ -297,11 +293,9 @@
     }
 
     &__title {
-      margin-left: 30px;
+      padding-left: 45px;
       margin-right: auto;
       &::before {
-        margin-left: -30px;
-        margin-right: 30px;
         width: 3px;
         border-radius: 2px;
       }
